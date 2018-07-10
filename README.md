@@ -13,6 +13,7 @@ sudo apt-get install python-pip
 sudo pip install virtualenv
 ```
 
+
 In case Ubuntu  
 `sudo apt-get install python-mysql.connector`
 
@@ -30,7 +31,6 @@ virtualenv venv
 pip install -r requirements.txt
 ```
 
-
 ### set environment
 
 ```
@@ -39,7 +39,6 @@ export APP_DEVELOPMENT_DATABASE_URI=<mysql_uri>
 ```
 * \<mode\> = 'production', 'development', 'testing', 'default'
 * \<mysql_uri\> = `mysql://<username>:<password>@<hostname>/<database_name>`
-
 
 
 ### Create database at the first
