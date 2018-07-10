@@ -31,14 +31,14 @@ pip install -r requirements.txt
 ```
 
 
-### set environment
+### save environment setting
 
 ```
-echo 'export APP_ORM_CONFIG=<mode>'>>/etc/profile
-echo 'export APP_DEVELOPMENT_DATABASE_URI=<mysql_uri>'>>/etc/profile
+echo 'export APP_ORM_CONFIG=<mode>'>>~/.bashrc
+echo 'export APP_DEVELOPMENT_DATABASE_URI=<mysql_uri>'>>~/.bashrc
 ```
 * \<mode\> = 'development' ('production', 'development', 'testing', 'default')
-* \<mysql_uri\> = `mysql://<username>:<password>@<hostip:port>/<database_name>`
+* \<mysql_uri\> = `mysql://<username>:<password>@<host_ip:host_port>/<database_name>`
 
 
 
