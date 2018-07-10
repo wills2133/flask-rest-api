@@ -1,6 +1,6 @@
 from flask import Flask
-from flask.ext.marshmallow import Marshmallow
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_marshmallow import Marshmallow
+from flask_sqlalchemy import SQLAlchemy
 
 from config import config
 
@@ -11,6 +11,9 @@ ma = Marshmallow()
 
 def create_app(config_name):
     app = Flask(__name__)
+    print '----------'
+    print config[config_name].SQLALCHEMY_DATABASE_URI
+    print '----------'
     app.config.from_object(config[config_name])
 
     db.init_app(app)

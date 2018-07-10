@@ -5,6 +5,10 @@ from .. import db
 from ..models.spaces import Spaces
 from ..schemas.spaces import space_schema, spaces_schema
 
+@api.route('/')
+def hellow_world(): 
+  return 'Hellow Flask!'
+
 @api.route('/spaces', methods=['GET'])
 def get_spaces():
   spaces = Spaces.query.all()

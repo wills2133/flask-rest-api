@@ -2,12 +2,15 @@
 
 import os
 
-from flask.ext.script import Manager
+from flask_script import Manager
 
 from app import create_app, db
 
 
 app = create_app(os.getenv('APP_CONFIG', 'default'))
+
+print os.getenv('APP_CONFIG', 'default')
+
 manager = Manager(app)
 
 
