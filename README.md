@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ```
 
 
-### save environment setting
+### Save environment setting
 
 ```
 echo 'export APP_ORM_CONFIG=<mode>'>>~/.bashrc
