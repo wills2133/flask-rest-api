@@ -10,6 +10,7 @@
 ```
 sudo apt-get install python2
 sudo apt-get install python-pip
+sudo apt-get install python-mysqldb
 sudo pip install virtualenv
 ```
 
@@ -23,6 +24,12 @@ In case Mac
 `brew install mysql-connector-python`
 
 
+### Create Database
+
+```
+mysql> create database <database_name>;
+```
+
 ### Use Virtualenv
 
 ```
@@ -31,14 +38,17 @@ virtualenv venv
 pip install -r requirements.txt
 ```
 
-### set environment
+
+### save environment setting
 
 ```
-export APP_ORM_CONFIG=<mode>
-export APP_DEVELOPMENT_DATABASE_URI=<mysql_uri>
+echo 'export APP_ORM_CONFIG=<mode>'>>~/.bashrc
+echo 'export APP_DEVELOPMENT_DATABASE_URI=<mysql_uri>'>>~/.bashrc
+
+source ~/.bashrc
 ```
-* \<mode\> = 'production', 'development', 'testing', 'default'
-* \<mysql_uri\> = `mysql://<username>:<password>@<hostname>/<database_name>`
+* \<mode\> = 'development' ('production', 'development', 'testing', 'default')
+* \<mysql_uri\> = `mysql://<username>:<password>@<host_ip:host_port>/<database_name>`
 
 
 ### Create database at the first
@@ -48,7 +58,7 @@ export APP_DEVELOPMENT_DATABASE_URI=<mysql_uri>
 
 ### Run server
 
-`./manage.py runserver`
+`./manage.py runserver  --host 0.0.0.0 --port 5000`
 
 
 ### Test Browser
