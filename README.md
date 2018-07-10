@@ -34,11 +34,11 @@ pip install -r requirements.txt
 ### set environment
 
 ```
-export APP_ORM_CONFIG=<mode>
-export APP_DEVELOPMENT_DATABASE_URI=<mysql_uri>
+echo 'export APP_ORM_CONFIG=<mode>'>>/etc/profile
+echo 'export APP_DEVELOPMENT_DATABASE_URI=<mysql_uri>'>>/etc/profile
 ```
-* \<mode\> = 'production', 'development', 'testing', 'default'
-* \<mysql_uri\> = `mysql://<username>:<password>@<hostname>/<database_name>`
+* \<mode\> = 'development' ('production', 'development', 'testing', 'default')
+* \<mysql_uri\> = `mysql://<username>:<password>@<hostip:port>/<database_name>`
 
 
 
@@ -49,7 +49,7 @@ export APP_DEVELOPMENT_DATABASE_URI=<mysql_uri>
 
 ### Run server
 
-`./manage.py runserver`
+`./manage.py runserver  --host 0.0.0.0 --port 5000`
 
 
 ### Test Browser
