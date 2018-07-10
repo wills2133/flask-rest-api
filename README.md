@@ -23,12 +23,6 @@ In case Mac
 `brew install mysql-connector-python`
 
 
-### Create Database
-
-```
-mysql> create database <database_name>;
-```
-
 
 ### Use Virtualenv
 
@@ -36,6 +30,12 @@ mysql> create database <database_name>;
 virtualenv venv
 . venv/bin/activate
 pip install -r requirements.txt
+```
+
+### Create Database
+
+```
+mysql> create database <database_name>;
 ```
 
 
