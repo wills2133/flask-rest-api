@@ -44,6 +44,8 @@ mysql> create database <database_name>;
 ```
 echo 'export APP_ORM_CONFIG=<mode>'>>~/.bashrc
 echo 'export APP_DEVELOPMENT_DATABASE_URI=<mysql_uri>'>>~/.bashrc
+
+source ~/.bashrc
 ```
 * \<mode\> = 'development' ('production', 'development', 'testing', 'default')
 * \<mysql_uri\> = `mysql://<username>:<password>@<host_ip:host_port>/<database_name>`
