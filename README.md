@@ -10,6 +10,7 @@
 ```
 sudo apt-get install python2
 sudo apt-get install python-pip
+sudo apt-get install python-mysqldb
 sudo pip install virtualenv
 ```
 
@@ -20,6 +21,13 @@ or
 
 In case Mac  
 `brew install mysql-connector-python`
+
+
+### Create Database
+
+```
+mysql> create database <database_name>;
+```
 
 
 ### Use Virtualenv
